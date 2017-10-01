@@ -1,0 +1,53 @@
+<resources>
+    <string name="language">en</string>
+    <string name="recorder">Call Recorder</string>
+    <string name="action_select">Select</string>
+    <string name="action_setting">Setting</string>
+    <string name="action_feedback">Feedback</string>
+    <string name="recorder_tab_first">INBOX</string>
+    <string name="recorder_tab_second">IMPORTANT</string>
+    <string name="list_item_title_today">Today</string>
+    <string name="list_item_title_yesterday">Yesterday</string>
+    <string name="list_item_title_older">Older</string>
+    <string name="list_empty_button_try">TRY</string>
+    <string name="list_empty_button_start">START</string>
+    <string name="list_empty_no_permission">Please allow access to your microphone to turn on automatic recording</string>
+    <string name="list_empty_try_call">Call recordings will be saved here\n Try it with a call now</string>
+    <string name="list_empty_unsupport">Woops! Looks like Call Recorder is not supported on your device</string>
+    <string name="audio_share">Share to</string>
+    <string name="delete_file_dialog_title">Delete recording</string>
+    <string name="delete_file_dialog_msg">Deleted recording can\'t be recovered. Are you sure to delete?</string>
+    <string name="important_empty_msg">Please mark important recordings from INBOX list</string>
+    <string name="delete_file_dialog_yes">DELETE</string>
+    <string name="delete_file_dialog_no">CANCEL</string>
+    <string name="toast_msg_start_record">【Alibaba Master】Recording starts</string>
+    <string name="toast_msg_end_record">【Alibaba Master】recording ends</string>
+    <string name="notification_msg_end_record">Call Recording completed</string>
+    <string name="recorder_only_support_one_side_msg">Only one side can be recorded</string>
+    <string name="recorder_open_speaker_msg">Please turn the speaker on to make sure both sides are recorded</string>
+    <string name="recorder_got_it">GOT IT</string>
+    <string name="recorder_feedback">FEEDBACK</string>
+    <string name="recroder_expire_toast">Alibaba Master needs to be upgraded before recording. Please upgrade</string>
+
+    <!-- for recorder settings added by GuangZan-->
+    <string name="recorder_settings_preference1">Call Recorder</string>
+    <string name="recorder_settings_preference2">Recording mode</string>
+    <string name="recorder_settings_preference2_auto">Automatic Recording</string>
+    <string name="recorder_settings_preference2_shake">Shake Phone to Record</string>
+    <string name="recorder_settings_preference2_auto_all">Automatic Recording</string>
+    <string name="recorder_settings_preference2_shake_all">Shake Phone to Record</string>
+    <string name="recorder_settings_preference3">Recording quality</string>
+    <string name="recorder_settings_preference3_low">Low</string>
+    <string name="recorder_settings_preference3_high">High</string>
+    <string name="recorder_settings_preference3_low_all">Low (small size)</string>
+    <string name="recorder_settings_preference3_high_all"> High (large size)</string>
+    <string name="recorder_settings_preference4">Notifications</string>
+    <string name="recorder_settings_preference5">Import recording from SD card</string>
+    <string name="recorder_import_title">Import recording</string>
+    <string name="recorder_import_title_right">Import</string>
+    <string name="recorder_import_search">Searching...</string>
+    <string name="recorder_import_selected">%d Selected</string>
+    <string name="recorder_import_not_found">Recording files not found</string>
+    <string name="recorder_import_select_all">All</string>
+    <string name="recorder_import_success">Files successfully imported</string>
+</resources>
