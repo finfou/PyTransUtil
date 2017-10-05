@@ -1,46 +1,34 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 from openpyxl import Workbook
-import xml.etree.ElementTree as etree
+from bs4 import BeautifulSoup
 
 
 if __name__ == '__main__':
-    tree = etree.parse('strings_call_recorder.xml')
-    root = tree.getroot()
-
     wb = Workbook()
     ws = wb.active
 
     # WriteHead(wb)
-    ws['A1']='Source'
-    ws['B1']='Key'
-    ws['C1']='Notes'
-    ws['D1']='English'
-    ws['E1']='Chinese'
-    ws['F1']='Hindi'
-    ws['H1']='Indonesia'
+    ws['A2']='Source'
+    ws['B2']='KeyName'
+    ws['C2']='Notes'
+    ws['D2']='English'
+    ws['E2']='Chinese'
+    ws['F2']='Hindi'
+    ws['G2']='Indonesia'
 
-    # Write entries
-    cnt=2
-    for child in root:
-        print(child.attrib['name'] + ' = ' + child.text)
-        ws['A'+cnt]=
+    soup = BeautifulSoup(open('strings_call_recorder.xml', encoding='utf-8'))
+    resources = soup.resources.findAll('string')
+    ln = 3
+    for resource in resources:
+        posSource = 'A%d' % ln
+        ws[posSource] = str(resource)
+        posKeyName= 'B%d' % ln
+        ws[posKeyName] = resource['name']
+        posEnglish = 'D%d' % ln
+        ws[posEnglish] = resource.string
+        ln += 1
+    ws['A1'] = 'count'
+    ws['B1'] = len(resources)
 
-
-    # wb = Workbook()
-    #
-    # # grab the active worksheet
-    # ws = wb.active
-    #
-    # # Data can be assigned directly to cells
-    # ws['A1'] = 42
-    #
-    # # Rows can also be appended
-    # ws.append([1, 2, 3])
-    #
-    # # Python types will automatically be converted
-    # import datetime
-    # ws['A2'] = datetime.datetime.now()
-    #
-    # # Save the file
-    # wb.save("sample.xlsx")
+    wb.save("sample.xlsx")
